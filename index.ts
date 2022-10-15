@@ -11,7 +11,7 @@ server.app.use(bodyParser.urlencoded({extended:true}));
 server.app.use('/',defaultRoutes);
 server.app.use('/cartas',cartaRoutes)
 
-mongoose.connect('mongodb://localhost:27017/mtgDb',(error)=>{
+mongoose.connect('mongodb+srv://usr_cartas:cartas2022@cluster0.tnz5agi.mongodb.net/mtgDb',(error)=>{
     if(error){
         throw error
         }
