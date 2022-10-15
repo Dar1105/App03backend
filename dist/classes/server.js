@@ -9,7 +9,6 @@ class Server {
         this.port = process.env.PORT || 3000;
         this.app = (0, express_1.default)();
     }
-    //iniciar servidor
     Start(callback) {
         this.app.listen(this.port, callback());
     }

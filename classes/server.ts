@@ -9,8 +9,6 @@ export default class Server{
 
     }
 
-    //iniciar servidor
-
     Start(callback:Function){
         this.app.listen(this.port,callback());
 
