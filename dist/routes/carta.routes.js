@@ -21,7 +21,7 @@ cartaRoutes.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* (
 }));
 cartaRoutes.get('/paging', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     let cardPage = 5;
-    let page = 1;
+    let page = Number(req.query.page) || 1;
     let skip = page - 1;
     skip = skip * cardPage;
     const cartas = yield carta_model_1.Carta.find().skip(skip).limit(cardPage);

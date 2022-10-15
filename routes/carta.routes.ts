@@ -16,7 +16,7 @@ cartaRoutes.get('/',async(req:Request,res:Response)=>{
 cartaRoutes.get('/paging', async(req:Request,res:Response)=>{
     
     let cardPage=5;
-    let page =1;
+    let page =Number(req.query.page) || 1;
     let skip = page-1;
     skip=skip*cardPage;
 
